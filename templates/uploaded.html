@@ -1,0 +1,6 @@
+{% block content %}
+<h1>File Name: {{ filename }}</h1>
+<a style="text-decoration: none; color:back; font-size:20px;" href="{{ url_for('upload') }}">New Upload</a>
+<br>
+<a style="text-decoration: none; color:back; font-size:20px;" href="{{ url_for('gallery') }}">Gallery</a>
+{% endblock content %}

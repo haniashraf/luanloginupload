@@ -8,16 +8,18 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from wtforms import FileField
 from flask_uploads import configure_uploads, IMAGES, UploadSet
+import clipboard
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['UPLOADED_IMAGES_DEST'] = 'uploads/images'
+app.config['UPLOADED_IMAGES_DEST'] = 'static/'
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+pic_list = []
 
 images = UploadSet('images', IMAGES)
 configure_uploads(app, images)
@@ -72,7 +74,9 @@ def connect():
 
 @app.route("/gallery")
 def gallery():
-    return render_template("projects.html")
+    global filename
+   
+    return render_template("projects.html", pic_list=pic_list)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -93,6 +97,7 @@ def login():
 
 
 @app.route('/signup', methods=['GET', 'POST'])
+@login_required
 def signup():
     form = RegisterForm()
 
@@ -119,12 +124,16 @@ def dashboard():
 @login_required
 def upload():
     form = MyForm()
-
+    
     if form.validate_on_submit():
-        
+        global filename
         filename = images.save(form.image.data)
-        return f'Filename: { filename }'
-
+        clipboard.copy(filename)
+        picname = clipboard.paste()
+    
+        pic_list.append(picname)
+        # return f'Filename: { filename }'
+        return render_template("uploaded.html", filename=filename)
     return render_template('upload.html', form=form)
 
 
