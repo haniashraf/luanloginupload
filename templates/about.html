@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static',filename='css/styles.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static',filename='css/about.css') }}"
+		/>
+		<title>Luna's Art - About</title>
+	</head>
+	<body>
+		<main>
+			<div id="images" class="about">
+				<div id="header">
+					<h2>About Me</h2>
+				</div>
+				<div class="art">
+					<div class="img">
+						<img
+							class="no"
+							src="{{ url_for('static',filename='img/img2.png')}}"
+							alt=""
+						/>
+						<img
+							class="no"
+							src="{{ url_for('static',filename='img/img3.png')}}"
+							alt=""
+						/>
+						<img
+							class="ye"
+							src="{{ url_for('static',filename='img/img4.png')}}"
+							alt=""
+						/>
+						<img src="{{ url_for('static',filename='img/img5.png')}}" alt="" />
+					</div>
+				</div>
+				<div class="caption">
+					<div class="title">
+						<img src="img/1.png" alt="" class="pic" />
+						<h3>About Me</h3>
+					</div>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+						illo incidunt sequi molestias laborum sapiente voluptates suscipit
+						ipsa, eligendi nobis sunt blanditiis voluptatum adipisci soluta
+						officia impedit corporis placeat ex quidem nihil esse ullam aut
+						quam? Expedita rerum voluptatem dignissimos vel quasi eveniet
+						praesentium, quisquam quod repellat velit voluptates impedit!
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+						laudantium distinctio voluptates. Placeat voluptates incidunt
+						officiis, repellat tempora molestiae. Recusandae cumque et eius
+						dolores illo consequatur sapiente omnis labore delectus.
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. At magni
+						saepe maxime corrupti consequuntur minima impedit fuga voluptate
+						facere culpa! Unde non tempora aut accusantium odit deserunt saepe
+						tempore nihil ducimus, culpa voluptatum a porro iusto optio, amet
+						officia omnis?
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+						sequi esse quae cum libero quam tenetur doloremque dicta ducimus
+						aspernatur?
+					</p>
+				</div>
+			</div>
+			<div class="nav">
+				<a href="{{ url_for('gallery') }}" class="btn" id="view-work"
+					>Gallery</a
+				>
+				<br />
+				<a href="{{ url_for('about') }}" class="btn" id="view-work">About Me</a>
+				<br />
+				<a href="{{ url_for('connect') }}" class="btn" id="view-work"
+					>Connect</a
+				>
+			</div>
+		</main>
+		<footer>
+			<h3>Get In Touch</h3>
+			<p>Email: <strong>lbekdache7@gmail.com</strong></p>
+			<p>Phone: <strong>(+966) 56 747 5783</strong></p>
+		</footer>
+	</body>
+</html>

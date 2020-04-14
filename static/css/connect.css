@@ -1,0 +1,38 @@
+#images {
+	padding-bottom: 40px;
+}
+.icon {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 40px;
+}
+.ii {
+	font-size: 20px;
+}
+i {
+	font-size: 15px;
+}
+.hh:hover {
+	color: burlywood;
+}
+.nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+a {
+	margin-right: 10px;
+}
+@media (min-width: 500px) {
+	.icon {
+		display: flex;
+		flex-direction: row;
+		padding-left: 24rem;
+		padding-bottom: 40px;
+	}
+	img {
+		height: 500px;
+	}
+}

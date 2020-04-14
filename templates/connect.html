@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static',filename='css/style1.css') }}"
+		/>
+		<script src="https://kit.fontawesome.com/c61e7f5239.js"></script>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static',filename='css/connect.css') }}"
+		/>
+		<title>Luna's Art - Connect</title>
+	</head>
+	<body>
+		<main>
+			<div id="images">
+				<div id="header">
+					<h2>Connect</h2>
+				</div>
+
+				<div id="landing">
+					<div
+						id="landing-image"
+						class="no"
+						style="background: url({{ url_for('static',filename='img/img8.png')}});"
+					></div>
+					<div id="landing-text">
+						<div id="landing-text-inner">
+							<h1>Connect to Luna</h1>
+							<br />
+							<br />
+							<div class="ii">
+								<i style="font-size: 25px;" class="fas fa-phone fa-3x"
+									>+966 56 747 5783</i
+								>
+								<br />
+								<br />
+								<i style="font-size: 25px;" class="far fa-envelope"
+									>. lbekdache7@gmail.com</i
+								>
+								<br />
+								<br />
+								<a
+									class="hh"
+									style="text-decoration: none; color: black; font-size: 25px;"
+									href="https://www.instagram.com/art.of.luna/"
+									><i style="font-size: 25px;" class="fab fa-instagram">
+										@art.of.luna</i
+									></a
+								>
+							</div>
+						</div>
+					</div>
+					<div
+						id="landing-image"
+						class="nos"
+						style="background: url({{ url_for('static',filename='img/img8.png')}});"
+					></div>
+				</div>
+			</div>
+			<div class="nav">
+				<a href="{{ url_for('gallery') }}" class="btn" id="view-work"
+					>Gallery</a
+				>
+				<br />
+				<a href="{{ url_for('about') }}" class="btn" id="view-work">About Me</a>
+				<br />
+				<a href="{{ url_for('connect') }}" class="btn" id="view-work"
+					>Connect</a
+				>
+			</div>
+		</main>
+
+		<footer>
+			<h3>Get In Touch</h3>
+			<p>Email: <strong>lbekdache7@gmail.com</strong></p>
+			<p>Phone: <strong>(+966) 56 747 5783</strong></p>
+		</footer>
+		<script
+			src="http://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
