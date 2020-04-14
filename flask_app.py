@@ -9,7 +9,6 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from wtforms import FileField
 from flask_uploads import configure_uploads, IMAGES, UploadSet
 import clipboard
-from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
